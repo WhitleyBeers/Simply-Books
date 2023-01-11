@@ -4,8 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import {
-  Navbar, Container, Nav,
+  Navbar, Container, Nav, Button,
 } from 'react-bootstrap';
+import { signOut } from '../utils/auth';
 
 export default function NavBar() {
   return (
@@ -33,6 +34,9 @@ export default function NavBar() {
             <Link passHref href="/profile">
               <Nav.Link>Profile</Nav.Link>
             </Link>
+            <Button type="button" size="lg" className="copy-btn" onClick={signOut}>
+              Sign Out
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
