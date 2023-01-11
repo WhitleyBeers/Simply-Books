@@ -8,12 +8,12 @@ export default function UserProfile() {
   const { user } = useAuth();
 
   return (
-    <div>
+    <div className="text-center my-4">
       <Image src={user.photoURL} alt="userURL" height="100px" width="100px" />
       <h1>Name: {user.displayName}</h1>
       <h3>Email: {user.email}</h3>
       <h4>Last Login: {user.metadata.lastSignInTime}</h4>
-      <Button type="button" size="lg" className="copy-btn" onClick={signOut}>
+      <Button type="button" size="md" className="copy-btn my-2" onClick={signOut}>
         Sign Out
       </Button>
     </div>

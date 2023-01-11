@@ -34,7 +34,7 @@ export default function NavBar() {
             <Link passHref href="/profile">
               <Nav.Link>Profile</Nav.Link>
             </Link>
-            <Button type="button" size="lg" className="copy-btn" onClick={signOut}>
+            <Button type="button" size="md" className="copy-btn" onClick={signOut}>
               Sign Out
             </Button>
           </Nav>
