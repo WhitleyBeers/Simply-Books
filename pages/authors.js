@@ -12,7 +12,7 @@ export default function ShowAuthors() {
   }, []);
 
   return (
-    <div>
+    <div className="text-center my-4 d-flex flex-wrap">
       {authors.map((author) => (
         <AuthorCard key={author.firebaseKey} authorObj={author} />
       ))}
