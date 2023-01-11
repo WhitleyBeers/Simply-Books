@@ -6,15 +6,18 @@ import { useAuth } from '../utils/context/authContext';
 export default function ShowAuthors() {
   const { user } = useAuth();
   const [authors, setAuthors] = useState([]);
+  const getAllTheAuthors = () => {
+    getAuthors(user.uid).then(setAuthors);
+  };
 
   useEffect(() => {
-    getAuthors(user.uid).then(setAuthors);
+    getAllTheAuthors();
   }, []);
 
   return (
     <div className="text-center my-4 d-flex flex-wrap">
       {authors.map((author) => (
-        <AuthorCard key={author.firebaseKey} authorObj={author} />
+        <AuthorCard key={author.firebaseKey} authorObj={author} onUpdate={getAllTheAuthors} />
       ))}
     </div>
   );
