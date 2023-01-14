@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { getAuthors } from '../api/authorData';
 import AuthorCard from '../components/AuthorCard';
